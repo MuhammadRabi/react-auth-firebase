@@ -1,26 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-import { onAuthStateChanged, getAuth, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from 'firebase/auth'
+import { RouterProvider, createBrowserRouter } from "react-router-dom"
+import UserWelcome from "./Pages/UserWelcome"
+import RegisterPage from "./Pages/RegisterPage"
+import SignInPage from "./Pages/SignInPage"
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p>firebase authentication</p>
-     
-    
-    </div>
-  )
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <SignInPage />,
+  },
+  {
+    path: "/signup",
+    element: <RegisterPage />,
+  },
+  {
+    path: "/user",
+    element: <UserWelcome />,
+  },
+])
+const App = () => {
+  return <RouterProvider router={router} />
 }
-
 export default App
