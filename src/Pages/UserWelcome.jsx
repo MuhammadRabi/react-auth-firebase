@@ -3,7 +3,6 @@ import SignOutBtn from "../Components/SignOutBtn"
 
 const UserWelcome = () => {
   const { user } = UserAuth()
-  console.log(user)
   return (
     <>
       <section className="my-5 flex flex-col mx-auto w-96 space-y-2">

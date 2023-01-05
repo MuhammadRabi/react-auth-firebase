@@ -10,6 +10,7 @@ import { auth } from "../firebase"
 const AuthContext = createContext()
 
 export const AuthContextProvider = ({ children }) => {
+  const [inputs, setInputs] = useState({ email: "", password: "" })
   const [user, setUser] = useState({})
 
   const register = (email, password) => {
@@ -34,7 +35,9 @@ export const AuthContextProvider = ({ children }) => {
   })
 
   return (
-    <AuthContext.Provider value={{ register, logIn, logOut, user }}>
+    <AuthContext.Provider
+      value={{ register, logIn, logOut, user, inputs, setInputs }}
+    >
       {children}
     </AuthContext.Provider>
   )

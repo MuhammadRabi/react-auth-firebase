@@ -6,6 +6,6 @@
 
 @layer components {
     .generic-btn {
-        @apply bg-slate-200 px-4 py-1 rounded-md text-[22px] capitalize w-full font-bold duration-300 hover:bg-slate-300 outline-none;
+        @apply bg-slate-200 mt-3 px-4 py-1 rounded-md text-[22px] capitalize w-full font-bold duration-300 hover:bg-slate-300 outline-none;
     }
 }

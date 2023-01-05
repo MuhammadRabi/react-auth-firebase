@@ -1,11 +1,10 @@
 import { UserAuth } from "../Context/AuthContext"
 
 const RegisterBtn = () => {
-  const { register } = UserAuth()
   return (
-    <button onClick={() => console.log(register)} className="generic-btn">
-      Register
-    </button>
+    <div className="flex justify-around">
+      <button className="generic-btn">Register</button>
+    </div>
   )
 }
 export default RegisterBtn
